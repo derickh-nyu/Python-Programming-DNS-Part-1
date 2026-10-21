@@ -1,10 +1,7 @@
 import dns.resolver
 
-# Initialize the default system resolver
-resolver = dns.resolver.Resolver()
-
 # Set the IP address of the local DNS server and a public DNS server
-local_host_ip = resolver.nameservers[0]
+local_host_ip = '192.168.1.1'
 real_name_server = '9.9.9.9'  # Research public DNS servers to find a valid DNS server IP address to use
 
 
@@ -54,9 +51,9 @@ def local_external_DNS_output(question_type):
         print(f"The IP address of {domain_name} is {ip_address}")
 
 
-# def exfiltrate_info(???, ???):  # testing method for part 2
-#     # data = query_local_dns_server(???, ???)
-#     # return data
+def exfiltrate_info(???, ???):  # testing method for part 2
+    data = query_local_dns_server(???, ???)
+    return data
 
 
 if __name__ == '__main__':
